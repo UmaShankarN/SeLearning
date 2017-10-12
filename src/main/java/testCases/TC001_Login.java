@@ -1,11 +1,7 @@
 package testCases;
 
 import java.net.MalformedURLException;
-import java.net.URL;
 
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -25,8 +21,7 @@ public class TC001_Login extends LeafTapsWrappers {
 		dataSheetName = "TC001";
 		
 	}
-	//first comment on TC001_Login.Java
-	@Test(dataProvider="fetchData")
+		@Test(dataProvider="fetchData")
 	public void login(String UName, String Pwd, String LgdUser) throws MalformedURLException{
 		
 		new LoginPage(driver, test)
