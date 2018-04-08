@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes" thread-count ="2" verbose="5">
+<parameter name="browserName" value="chrome"></parameter>
+<parameter name="URL" value="http://192.168.1.17"></parameter>
+<parameter name="userName" value="DemoSalesManager"></parameter>
+<parameter name="password" value="crmsfa"></parameter>
+  <test name="Test">
+    <classes>
+      <class name="wrappers.DeleteLead"/>
+      <class name="wrappers.CreateLead"/>
+      <class name="wrappers.EditLead"/>
+      <class name="wrappers.DuplicateLead"/>
+      <class name="wrappers.MergeLeadTestCaseDown"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+
+<!-- EditLead and DeleteLead should be depends on createLead, Duplicate Lead is not ready yet 
+	a) CreateLead should run 2times
+	b) MergeLead should completed within 20 seconds
+	c) Run Create, Edit, Delete and MergeLeads in parallel for 2 Thread counts and bring the observation.
+	1. create, merge, 
+	2. create, 
+	3. edit, delete*/ -->
+	

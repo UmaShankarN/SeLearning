@@ -5,6 +5,7 @@ import java.net.MalformedURLException;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import net.sourceforge.htmlunit.corejs.javascript.tools.debugger.Main;
 import pages.LoginPage;
 import wrappers.LeafTapsWrappers;
 
@@ -21,9 +22,7 @@ public class TC001_Login extends LeafTapsWrappers {
 		dataSheetName = "TC001";
 		
 	}
-		@Test(dataProvider="fetchData")
 	public void login(String UName, String Pwd, String LgdUser) throws MalformedURLException{
-		
 		new LoginPage(driver, test)
 		.enterUserName(UName)
 		.enterPassword(Pwd)

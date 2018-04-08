@@ -15,8 +15,6 @@ public class LeafTapsWrappers extends GenericWrappers {
 	public String browserName;
 	public String dataSheetName;
 	
-	
-
 	@BeforeSuite
 	public void beforeSuite(){
 		startResult();
